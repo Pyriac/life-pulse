@@ -6,7 +6,7 @@ const notesAction = async ({ request }) => {
   switch (request.method.toLowerCase()) {
     case "post": {
       try {
-        const response = await myAxios.post(`/api/notes`, formData, {
+        const response = await myAxios.post(`/api/notes`, {
           sport: formData.get("sport"),
           sleep: formData.get("sleep"),
           mental: formData.get("mental"),
