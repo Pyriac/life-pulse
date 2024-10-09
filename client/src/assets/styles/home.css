@@ -1,0 +1,15 @@
+.addButton {
+  font-size: 2rem;
+  color: var(--first-white);
+  background-color: var(--first-blue);
+  padding: 1rem 1.92rem;
+  border-radius: 4rem;
+  position: fixed;
+  bottom: 32px;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+.home h4 {
+  margin-left: 6%;
+}

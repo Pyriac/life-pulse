@@ -10,7 +10,7 @@ export default function ProgressBar({ data, className }) {
     <div className={`progress${className}`}>
       <div
         className="progressScore"
-        style={{ width: `${width}%`, backgroundColor: `${className}` }}
+        style={{ width: `${width}%`, backgroundColor: `#${className}` }}
       >
         <p>{data * 10}%</p>
       </div>

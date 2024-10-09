@@ -10,7 +10,7 @@ export default function Home() {
     notesData.reduce((acc, note) => acc + note.mental, 0) / notesData.length;
   console.info(notesData);
   return (
-    <>
+    <div className="home">
       <h2>Bonjour User 👋</h2>
       <h3>Voici un résumé de tes derniers jours :</h3>
 
@@ -21,7 +21,9 @@ export default function Home() {
       <h4>Mental :</h4>
       <ProgressBar data={mental} className="1ABC9C" />
 
-      <Link to="/add">+</Link>
-    </>
+      <Link className="addButton" to="/add">
+        +
+      </Link>
+    </div>
   );
 }

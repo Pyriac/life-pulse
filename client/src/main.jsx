@@ -7,6 +7,7 @@ import App from "./App";
 import Home from "./pages/Home";
 
 import notesLoader from "./services/notesLoader";
+import Add from "./pages/Add";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         loader: notesLoader.AllNotesLoader,
+      },
+      {
+        path: "/add",
+        element: <Add />,
       },
     ],
   },
