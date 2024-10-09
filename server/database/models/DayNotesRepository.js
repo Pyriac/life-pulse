@@ -6,6 +6,7 @@ class DayNotesRepository extends AbstractRepository {
   }
 
   async create(DayNotes) {
+    console.info(DayNotes);
     const [result] = await this.database.query(
       `insert into ${this.table} (sport, sleep, mental, date) values (?, ?, ?, ?)`,
       [DayNotes.sport, DayNotes.sleep, DayNotes.mental, DayNotes.date]
