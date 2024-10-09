@@ -4,9 +4,10 @@ create table user (
   password varchar(255) not null
 );
 
-create table item (
+create table dayNotes (
   id int unsigned primary key auto_increment not null,
-  title varchar(255) not null,
-  user_id int unsigned not null,
-  foreign key(user_id) references user(id)
+  sport INT NOT NULL,
+  sleep INT NOT NULL,
+  mental INT NOT NULL,
+  date DATE NOT NULL
 );
