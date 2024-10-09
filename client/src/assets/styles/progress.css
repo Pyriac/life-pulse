@@ -1,0 +1,32 @@
+.progressF39C12,
+.progressD2B4DE,
+.progress1ABC9C {
+  display: flex;
+  height: 32px;
+  width: 80%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-left: 10%;
+}
+
+.progressF39C12 {
+  background-color: rgba(243, 156, 18, 0.2);
+}
+
+.progressD2B4DE {
+  background-color: rgba(210, 180, 222, 0.4);
+}
+
+.progress1ABC9C {
+  background-color: rgba(26, 188, 156, 0.4);
+}
+
+.progressScore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--first-white);
+}
+.progressScore p {
+  font-weight: 600;
+}

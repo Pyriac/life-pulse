@@ -1,4 +1,5 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
+import ProgressBar from "../components/ProgressBar";
 
 export default function Home() {
   const notesData = useLoaderData();
@@ -11,10 +12,16 @@ export default function Home() {
   return (
     <>
       <h2>Bonjour User 👋</h2>
-      <h3>Comment ce sont passés tes derniers jours :</h3>
-      <h4>{sport}</h4>
-      <h4>{sleep}</h4>
-      <h4>{mental}</h4>
+      <h3>Voici un résumé de tes derniers jours :</h3>
+
+      <h4>Sport :</h4>
+      <ProgressBar data={sport} className="F39C12" />
+      <h4>Sommeil :</h4>
+      <ProgressBar data={sleep} className="D2B4DE" />
+      <h4>Mental :</h4>
+      <ProgressBar data={mental} className="1ABC9C" />
+
+      <Link to="/add">+</Link>
     </>
   );
 }
