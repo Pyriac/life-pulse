@@ -9,6 +9,8 @@ import Add from "./pages/Add";
 
 import notesLoader from "./services/notesLoader";
 import notesAction from "./services/notesAction";
+import Login from "./pages/Login";
+import NewAccount from "./pages/NewAccount";
 
 const router = createBrowserRouter([
   {
@@ -18,11 +20,20 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         loader: notesLoader.AllNotesLoader,
+        errorElement: <Login />,
       },
       {
         path: "/add",
         element: <Add />,
         action: notesAction,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/newaccount",
+        element: <NewAccount />,
       },
     ],
   },
