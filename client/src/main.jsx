@@ -6,11 +6,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/Home";
 import Add from "./pages/Add";
+import Login from "./pages/Login";
+import NewAccount from "./pages/NewAccount";
 
 import notesLoader from "./services/notesLoader";
 import notesAction from "./services/notesAction";
-import Login from "./pages/Login";
-import NewAccount from "./pages/NewAccount";
+import userAction from "./services/userAction";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
       {
         path: "/newaccount",
         element: <NewAccount />,
+        action: userAction,
       },
     ],
   },

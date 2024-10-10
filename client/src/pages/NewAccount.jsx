@@ -5,14 +5,14 @@ export default function NewAccount() {
     <>
       <h1>Bienvenue sur LifePulse</h1>
       <h2>HealthTracker</h2>
-      <Form>
+      <Form method="post">
         <h3>Créer un compte</h3>
         <label htmlFor="email">Entre votre Email</label>
-        <input type="email" />
+        <input type="email" name="email" />
         <label htmlFor="password">Mot de passe</label>
-        <input type="password" />
-        <label htmlFor="confirmpassword">Confirmez le mot de passe</label>
-        <input type="password" />
+        <input type="password" name="password" />
+        <label htmlFor="confirmPassword">Confirmez le mot de passe</label>
+        <input type="password" name="confirmPassword" />
         <button type="submit">Créer compte</button>
       </Form>
     </>
