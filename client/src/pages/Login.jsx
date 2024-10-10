@@ -5,12 +5,12 @@ export default function Login() {
     <>
       <h1>Bienvenue sur LifePulse</h1>
       <h2>HealthTracker</h2>
-      <Form>
+      <Form method="post">
         <h3>Se Connecter</h3>
         <label htmlFor="email">email</label>
-        <input type="email" />
+        <input type="email" name="email" />
         <label htmlFor="password">mot de passe</label>
-        <input type="password" />
+        <input type="password" name="password" />
         <button type="submit">Connexion</button>
       </Form>
       <p>Vous n'avez pas encore de compte ?</p>

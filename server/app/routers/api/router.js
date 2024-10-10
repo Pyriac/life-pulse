@@ -10,6 +10,7 @@ const router = express.Router();
 
 const daynotesAction = require("../../controllers/dayNotesAction");
 const userActions = require("../../controllers/UserActions");
+const middleware = require("../../services/middleware");
 
 // Declare route
 
@@ -19,7 +20,14 @@ router.post("/notes", daynotesAction.add);
 router.put("/notes/:id", daynotesAction.edit);
 router.delete("/notes/:id", daynotesAction.destroy);
 
-router.post("/user", userActions.add);
+router.post("/user", middleware.hashPassword, userActions.add);
+
+router.post(
+  "/login",
+  userActions.login,
+  userActions.createToken,
+  userActions.createCookie
+);
 
 /* ************************************************************************* */
 

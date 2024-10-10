@@ -12,6 +12,7 @@ import NewAccount from "./pages/NewAccount";
 import notesLoader from "./services/notesLoader";
 import notesAction from "./services/notesAction";
 import userAction from "./services/userAction";
+import loginActions from "./services/loginAction";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+        action: loginActions,
       },
       {
         path: "/newaccount",
