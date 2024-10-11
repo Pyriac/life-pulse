@@ -17,7 +17,9 @@ const loginActions = async ({ request }) => {
           }
         );
         if (response.status === 201) {
-          return redirect("/");
+          setTimeout(() => {
+            redirect("/");
+          }, 1000);
         }
       } catch (error) {
         return error.response.data;

@@ -24,6 +24,7 @@ const router = createBrowserRouter([
         element: <Home />,
         loader: notesLoader.AllNotesLoader,
         errorElement: <Login />,
+        action: loginActions,
       },
       {
         path: "/add",
