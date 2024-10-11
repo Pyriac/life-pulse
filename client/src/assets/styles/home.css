@@ -26,16 +26,25 @@
 }
 
 .sportNote {
-  color: var(--first-orange);
+  background-color: var(--first-orange);
+  color: var(--first-blue);
   font-weight: 900;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
 }
 
 .sleepNote {
-  color: var(--first-purple);
+  background-color: var(--first-purple);
+  color: var(--first-blue);
   font-weight: 900;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
 }
 
 .mentalNote {
-  color: var(--first-green);
+  background-color: var(--first-green);
+  color: var(--first-blue);
   font-weight: 900;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
 }
