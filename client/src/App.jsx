@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import "./assets/styles/root.css";
 import "./assets/styles/home.css";
 import "./assets/styles/progress.css";
+import "./assets/styles/add.css";
 
 function App() {
   return (

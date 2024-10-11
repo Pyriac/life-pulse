@@ -1,18 +1,27 @@
+import { useState, useEffect } from "react";
 import propTypes from "prop-types";
 
 export default function ProgressBar({ data, className }) {
-  let width = data * 10;
-  if (width > 100) {
-    width = 100;
-  }
+  const [width, setWidth] = useState(0);
+  const dataWidth = data * 10;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setWidth(dataWidth > 100 ? 100 : dataWidth);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [dataWidth]);
 
   return (
     <div className={`progress${className}`}>
       <div
         className="progressScore"
-        style={{ width: `${width}%`, backgroundColor: `#${className}` }}
+        style={{
+          width: `${width}%`,
+          backgroundColor: `#${className}`,
+          transition: "width 1.5s ease-in-out",
+        }}
       >
-        <p>{data * 10}%</p>
+        <p>{dataWidth}%</p>
       </div>
     </div>
   );

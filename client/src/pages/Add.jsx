@@ -3,7 +3,7 @@ import DayNotesForm from "../components/DayNotesForm";
 
 export default function Add() {
   return (
-    <div>
+    <div className="add">
       {" "}
       <h2>Comment c'est passé votre journée ?</h2>
       <Form method="post">

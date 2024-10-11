@@ -2,7 +2,7 @@ export default function DayNotesForm() {
   const thisDay = new Date();
   const formattedDate = thisDay.toISOString().split("T")[0];
   return (
-    <>
+    <div className="form">
       <h4>Notez votre :</h4>
       <label htmlFor="sport">Forme physique</label>
       <input type="number" name="sport" />
@@ -14,6 +14,6 @@ export default function DayNotesForm() {
         Tu enregistres tes valeurs pour aujourd'hui ?
       </label>
       <input type="date" name="date" defaultValue={formattedDate} />
-    </>
+    </div>
   );
 }
