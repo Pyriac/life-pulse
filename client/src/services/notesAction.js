@@ -6,12 +6,18 @@ const notesAction = async ({ request }) => {
   switch (request.method.toLowerCase()) {
     case "post": {
       try {
-        const response = await myAxios.post(`/api/notes`, {
-          sport: formData.get("sport"),
-          sleep: formData.get("sleep"),
-          mental: formData.get("mental"),
-          date: formData.get("date"),
-        });
+        const response = await myAxios.post(
+          `/api/notes`,
+          {
+            sport: formData.get("sport"),
+            sleep: formData.get("sleep"),
+            mental: formData.get("mental"),
+            date: formData.get("date"),
+          },
+          {
+            withCredentials: true,
+          }
+        );
         if (response.status === 201) {
           return json({ message: "C'est bien noté, à demain !" });
         }

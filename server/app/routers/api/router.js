@@ -14,9 +14,9 @@ const middleware = require("../../services/middleware");
 
 // Declare route
 
-router.get("/notes", daynotesAction.browse);
+router.get("/notes", middleware.getUserId, daynotesAction.browse);
 router.get("/notes/:id", daynotesAction.read);
-router.post("/notes", daynotesAction.add);
+router.post("/notes", middleware.getUserId, daynotesAction.add);
 router.put("/notes/:id", daynotesAction.edit);
 router.delete("/notes/:id", daynotesAction.destroy);
 

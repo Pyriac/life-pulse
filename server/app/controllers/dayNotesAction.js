@@ -1,11 +1,8 @@
-const jwt = require("jsonwebtoken");
 const tables = require("../../database/tables");
 
 const browse = async (req, res, next) => {
   try {
-    const token = req.cookies.auth;
-    const user = await jwt.decode(token);
-    const userId = user.id;
+    const userId = req.body.user_id;
     const dayNotes = await tables.dayNotes.readAll(userId);
     res.json(dayNotes);
   } catch (err) {
@@ -39,6 +36,7 @@ const edit = async (req, res, next) => {
 
 const add = async (req, res, next) => {
   const dayNotes = req.body;
+  console.info(req.body);
   try {
     const insertId = await tables.dayNotes.create(dayNotes);
     res.status(201).json({ insertId });

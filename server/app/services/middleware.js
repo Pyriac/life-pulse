@@ -1,4 +1,5 @@
 const argon2 = require("argon2");
+const jwt = require("jsonwebtoken");
 
 const hashingOptions = {
   type: argon2.argon2id,
@@ -22,6 +23,17 @@ const hashPassword = async (req, res, next) => {
   }
 };
 
-const middleware = { hashPassword };
+const getUserId = async (req, res, next) => {
+  try {
+    const token = req.cookies.auth;
+    const user = await jwt.decode(token);
+    req.body.user_id = user.id;
+    next();
+  } catch (error) {
+    next(error);
+  }
+};
+
+const middleware = { hashPassword, getUserId };
 
 module.exports = middleware;
