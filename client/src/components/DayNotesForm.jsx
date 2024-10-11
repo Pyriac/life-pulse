@@ -1,7 +1,6 @@
 export default function DayNotesForm() {
   const thisDay = new Date();
   const formattedDate = thisDay.toISOString().split("T")[0];
-  console.info(thisDay);
   return (
     <>
       <h4>Notez votre :</h4>

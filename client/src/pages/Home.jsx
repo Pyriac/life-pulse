@@ -1,5 +1,6 @@
 import { useLoaderData, Link } from "react-router-dom";
 import ProgressBar from "../components/ProgressBar";
+import CardNotes from "../components/CardNotes";
 
 export default function Home() {
   const notesData = useLoaderData();
@@ -20,6 +21,10 @@ export default function Home() {
       <ProgressBar data={sleep} className="D2B4DE" />
       <h4>Mental :</h4>
       <ProgressBar data={mental} className="1ABC9C" />
+
+      {notesData.map((note) => (
+        <CardNotes key={note.id} note={note} />
+      ))}
 
       <Link className="addButton" to="/add">
         +

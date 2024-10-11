@@ -13,3 +13,29 @@
 .home h4 {
   margin-left: 6%;
 }
+
+.CardNotes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: var(--second-orange);
+  padding: 1rem;
+  width: 90%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+
+.sportNote {
+  color: var(--first-orange);
+  font-weight: 900;
+}
+
+.sleepNote {
+  color: var(--first-purple);
+  font-weight: 900;
+}
+
+.mentalNote {
+  color: var(--first-green);
+  font-weight: 900;
+}
