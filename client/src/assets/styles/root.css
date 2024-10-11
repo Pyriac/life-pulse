@@ -18,6 +18,7 @@
   --second-orange: #fdebd0;
   --first-purple: #d2b4de;
   --first-green: #1abc9c;
+  --first-grey: #ecf0f1;
 }
 
 h1,
@@ -32,4 +33,18 @@ h6 {
 
 #root {
   min-height: 100vh;
+}
+
+.Footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0px;
+  background-color: var(--first-grey);
+  padding: 1.5rem 3.5rem;
+}
+.emoji {
+  font-size: 1.2rem;
 }
