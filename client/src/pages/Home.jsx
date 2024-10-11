@@ -25,7 +25,7 @@ export default function Home() {
       </div>
       <div className="home_card">
         {notesData.map((note) => (
-          <Link key={note.id} to="/login">
+          <Link key={note.id} to={`/daynotes/${note.id}`}>
             <CardNotes note={note} />
           </Link>
         ))}

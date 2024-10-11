@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Add from "./pages/Add";
 import Login from "./pages/Login";
 import NewAccount from "./pages/NewAccount";
+import DayNotes from "./pages/DayNotes";
 
 import notesLoader from "./services/notesLoader";
 import notesAction from "./services/notesAction";
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
         path: "/newaccount",
         element: <NewAccount />,
         action: userAction,
+      },
+      {
+        path: "/daynotes/:id",
+        element: <DayNotes />,
+        loader: notesLoader.NotesLoaderById,
       },
     ],
   },
