@@ -34,10 +34,10 @@ class DayNotesRepository extends AbstractRepository {
     return rows;
   }
 
-  async update(DayNotes) {
+  async update(id, DayNotes) {
     const [result] = await this.database.query(
-      `update ${this.table} set sport = ?, sleep = ?, mental = ? where date = ?`,
-      [DayNotes.sport, DayNotes.sleep, DayNotes.mental, DayNotes.date]
+      `update ${this.table} set sport = ?, sleep = ?, mental = ? where id = ?`,
+      [DayNotes.sport, DayNotes.sleep, DayNotes.mental, id]
     );
     return result.insertId;
   }

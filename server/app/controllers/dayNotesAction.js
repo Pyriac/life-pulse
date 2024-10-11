@@ -25,6 +25,7 @@ const read = async (req, res, next) => {
 
 const edit = async (req, res, next) => {
   try {
+    console.info(req.body);
     const { id } = req.params;
     const dayNotes = req.body;
     await tables.dayNotes.update(id, dayNotes);

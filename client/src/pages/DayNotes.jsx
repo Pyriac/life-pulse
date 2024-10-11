@@ -17,7 +17,7 @@ export default function DayNotes() {
         <p>Tu veux changer tes notes ?</p>
       </div>
       <div>
-        <Form>
+        <Form method="put">
           <label htmlFor="sport">Sport :</label>
           <input type="number" name="sport" defaultValue={dayNote.sport} />
           <label htmlFor="sleep">Sommeil :</label>
@@ -26,7 +26,7 @@ export default function DayNotes() {
           <input type="number" name="mental" defaultValue={dayNote.mental} />
           <button type="submit">Mettre à jour</button>
         </Form>
-        <Form>
+        <Form method="delete">
           <button type="submit">Supprimer</button>
         </Form>
       </div>

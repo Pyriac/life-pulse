@@ -44,6 +44,7 @@ const router = createBrowserRouter([
         path: "/daynotes/:id",
         element: <DayNotes />,
         loader: notesLoader.NotesLoaderById,
+        action: notesAction,
       },
     ],
   },
