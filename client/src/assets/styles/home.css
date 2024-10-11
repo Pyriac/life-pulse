@@ -14,10 +14,27 @@
   margin-left: 6%;
 }
 
+.home_progress {
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.home_card {
+  height: 50vh;
+  overflow-y: scroll;
+  background-color: rgba(253, 235, 208, 0.4);
+  margin: 2vh auto;
+  border-radius: 1rem;
+  width: 95%;
+}
+
 .CardNotes {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   background-color: var(--second-orange);
   padding: 1rem;
   width: 90%;

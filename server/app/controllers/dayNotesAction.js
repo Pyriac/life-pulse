@@ -1,8 +1,12 @@
+const jwt = require("jsonwebtoken");
 const tables = require("../../database/tables");
 
 const browse = async (req, res, next) => {
   try {
-    const dayNotes = await tables.dayNotes.readAll();
+    const token = req.cookies.auth;
+    const user = await jwt.decode(token);
+    const userId = user.id;
+    const dayNotes = await tables.dayNotes.readAll(userId);
     res.json(dayNotes);
   } catch (err) {
     next(err);

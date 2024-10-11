@@ -7,8 +7,14 @@ class DayNotesRepository extends AbstractRepository {
 
   async create(DayNotes) {
     const [result] = await this.database.query(
-      `insert into ${this.table} (sport, sleep, mental, date) values (?, ?, ?, ?)`,
-      [DayNotes.sport, DayNotes.sleep, DayNotes.mental, DayNotes.date]
+      `insert into ${this.table} (sport, sleep, mental, date, user_id) values (?, ?, ?, ?, ?)`,
+      [
+        DayNotes.sport,
+        DayNotes.sleep,
+        DayNotes.mental,
+        DayNotes.date,
+        DayNotes.user_id,
+      ]
     );
     return result.insertId;
   }
@@ -21,8 +27,10 @@ class DayNotesRepository extends AbstractRepository {
     return rows[0];
   }
 
-  async readAll() {
-    const [rows] = await this.database.query(`select * from ${this.table}`);
+  async readAll(userId) {
+    const [rows] = await this.database.query(
+      `select * from ${this.table} where user_id = ${userId} order by date desc`
+    );
     return rows;
   }
 

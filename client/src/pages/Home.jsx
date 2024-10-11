@@ -12,20 +12,22 @@ export default function Home() {
   console.info(notesData);
   return (
     <div className="home">
-      <h2>Bonjour User 👋</h2>
-      <h3>Voici un résumé de tes derniers jours :</h3>
+      <div className="home_progress">
+        <h2>Bonjour User 👋</h2>
+        <h3>Voici un résumé de tes derniers jours :</h3>
 
-      <h4>Sport :</h4>
-      <ProgressBar data={sport} className="F39C12" />
-      <h4>Sommeil :</h4>
-      <ProgressBar data={sleep} className="D2B4DE" />
-      <h4>Mental :</h4>
-      <ProgressBar data={mental} className="1ABC9C" />
-
-      {notesData.map((note) => (
-        <CardNotes key={note.id} note={note} />
-      ))}
-
+        <h4>Sport :</h4>
+        <ProgressBar data={sport} className="F39C12" />
+        <h4>Sommeil :</h4>
+        <ProgressBar data={sleep} className="D2B4DE" />
+        <h4>Mental :</h4>
+        <ProgressBar data={mental} className="1ABC9C" />
+      </div>
+      <div className="home_card">
+        {notesData.map((note) => (
+          <CardNotes key={note.id} note={note} />
+        ))}
+      </div>
       <Link className="addButton" to="/add">
         +
       </Link>
