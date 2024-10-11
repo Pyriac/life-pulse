@@ -21,7 +21,7 @@ export default function ProgressBar({ data, className }) {
           transition: "width 1.5s ease-in-out",
         }}
       >
-        <p>{dataWidth}%</p>
+        <p>{Math.floor(dataWidth)}%</p>
       </div>
     </div>
   );

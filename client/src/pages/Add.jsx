@@ -8,7 +8,9 @@ export default function Add() {
       <h2>Comment c'est passé votre journée ?</h2>
       <Form method="post">
         <DayNotesForm />
-        <button type="submit">C'est noté !</button>
+        <button type="submit" className="createButton">
+          C'est noté !
+        </button>
       </Form>
     </div>
   );

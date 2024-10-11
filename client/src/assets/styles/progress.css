@@ -26,6 +26,7 @@
   align-items: center;
   justify-content: center;
   color: var(--first-white);
+  transition: "width 1.5s ease-in-out";
 }
 .progressScore p {
   font-weight: 600;
